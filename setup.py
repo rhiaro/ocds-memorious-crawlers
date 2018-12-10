@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='ocds-memorious-crawlwers',
+    name='ocds-memorious-crawlers',
     version='0.1',
     author='Amy Guy',
     author_email='amy@rhiaro.co.uk',

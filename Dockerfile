@@ -7,4 +7,4 @@ COPY . /ocds/
 RUN pip install -q -e /ocds
 
 ENV MEMORIOUS_CONFIG_PATH=/ocds/crawlers/config \
-    MEMORIOUS_DEBUG=false
+    MEMORIOUS_DEBUG=true
