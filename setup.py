@@ -2,26 +2,21 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='ocds-memorious-crawlers',
+    name='crawlers',
     version='0.1',
     author='Amy Guy',
     author_email='amy@rhiaro.co.uk',
     url='https://github.com/rhiaro/ocds-memorious-crawlers',
     license='MIT',
-    packages=find_packages(exclude=['ez_setup', 'examples', 'test']),
+    packages=find_packages('src'),
+    package_dir={'': 'crawlers/src'},
     namespace_packages=[],
     package_data={
         'ocds-memorious-crawlers': ['config/*.yml']
     },
     zip_safe=False,
     install_requires=[
-        'memorious >= 0.4',
-        'xlrd',
-        'attrs',
+        'memorious >= 0.7.20'
     ],
-    entry_points={
-        'memorious.plugins': [
-            'ocds-memorious-crawlers = crawlers:init'
-        ]
-    }
+    entry_points={}
 )
