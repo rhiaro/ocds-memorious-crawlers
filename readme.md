@@ -15,9 +15,19 @@ NB. This is mostly note-to-self at this point.
 ```
 (host) sudo docker build -t ods/crawlers .
 
-(host) sudo docker run -it -v /home/rhiaro/Documents/code/ocds-memorious-crawlers/:/ocds --name crawlers ods/crawlers /bin/bash
+(host) sudo docker run -it -v /home/rhiaro/Documents/code/ocds-memorious-crawlers/:/ocds -p 4000:4000 --name crawlers ods/crawlers /bin/bash
+```
 
+Do CLI stuff:
+
+```
 (crawlers) memorious list
 
 (crawlers) memorious run ca_buyandsell
+```
+
+Fire up the UI:
+
+```
+(crawlers) python memorious/ui/__init__.py
 ```
