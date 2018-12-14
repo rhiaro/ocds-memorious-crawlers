@@ -1,0 +1,22 @@
+name: mexico_jalisco
+description: Contracting data from Jalisco, Mexico.
+pipeline:
+  init:
+    method: mexico_jalisco:get_record_urls
+    params:
+      url: https://contratacionesabiertas.jalisco.gob.mx/OCApi/2017/contracts
+    handle:
+      pass: fetch
+  fetch:
+    method: fetch
+    handle:
+      pass: fetch_releases
+  fetch_releases:
+    method: mexico_jalisco:get_release_urls
+    handle:
+      release: fetch
+      pass: store
+  store:
+    method: directory
+    params:
+      path: data
