@@ -29,5 +29,5 @@ Do CLI stuff:
 Fire up the UI:
 
 ```
-(crawlers) python memorious/ui/__init__.py
+(crawlers) python memorious/ui/views.py
 ```
